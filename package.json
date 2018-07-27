@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/drewphillips/FriendFinder/issues"
   },
-  "homepage": "https://github.com/drewphillips/FriendFinder#readme"
+  "homepage": "https://github.com/drewphillips/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "require": "^2.4.20",
+    "routing": "0.0.2"
+  },
+  "devDependencies": {}
 }
