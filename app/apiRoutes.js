@@ -1,5 +1,5 @@
 module.exports = function (app) {
-    app.post("/api/frineds", function(req, res){
+    app.post("/api/friedns", function(req, res){
         console.log(req.body)
         res.json(req.body)
 
@@ -10,6 +10,7 @@ module.exports = function (app) {
         friends.push(userData);
     })
 }
+var friends = require("../app/data/friends");
 
 var bestmatch;
         var bestscore = 999;
@@ -17,7 +18,7 @@ var bestmatch;
         for (var i = 0; i < friends.length; i++) {
             var score = 0;
             for (var j = 0; j < 10; j++) {
-                var partialsum = Math.abs(friends[i].scores[j] - userData.scores[j]);
+                var partialsum = Math.abs(friends[i].scores[j] - friends.scores);
                 score += partialsum;
             }
             if (score < bestscore) {
@@ -26,4 +27,4 @@ var bestmatch;
             }
         }
 
-        res.json(friends[bestmatch]);
+     res.json(friends[bestmatch]);
