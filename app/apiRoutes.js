@@ -1,16 +1,17 @@
+var friends = require("../app/data/friends");
+
 module.exports = function (app) {
     app.post("/api/friedns", function(req, res){
         console.log(req.body)
-        res.json(req.body)
+        // res.json(req.body)
 
         var userData = req.body;
         console.log(userData);
 
         console.log(friends);
         friends.push(userData);
-    })
-}
-var friends = require("../app/data/friends");
+    });
+
 
 var bestmatch;
         var bestscore = 999;
@@ -27,4 +28,6 @@ var bestmatch;
             }
         }
 
+    }
      res.json(friends[bestmatch]);
+    
