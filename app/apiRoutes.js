@@ -20,6 +20,9 @@ module.exports = function (app) {
         }
     }
     console.log(friends[0]);
-    res.json(friends[bestmatch]);
+    res.json(friends[0]);
 })
-}
+
+
+return app;
+};
