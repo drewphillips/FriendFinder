@@ -1,9 +1,9 @@
 var friends = require("../app/data/friends");
 
 module.exports = function (app) {
-    app.post("api/friends", function (req, res) {
+    app.post("/api/friends", function (req, res) {
         var userData = req.body;
-        console.log(userData);
+        // console.log(userData);
 
     var bestmatch;
     var bestscore = 999;
@@ -19,6 +19,7 @@ module.exports = function (app) {
             bestmatch = i;
         }
     }
+    console.log(friends[0]);
     res.json(friends[bestmatch]);
 })
 }

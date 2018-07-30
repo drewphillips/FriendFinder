@@ -242,7 +242,8 @@
         var currentURL = window.location.origin;
         // .post the data to the friends API. not saving?
         $.post("api/friends", userData, function (data) {
-          console.log("sent!");
+          // console.log("sent!");
+          console.log(data);
           // Grab the result from the post, logic.
           $("#matchName").text(data.name);
           $('#matchImg').attr("src", data.photo);
