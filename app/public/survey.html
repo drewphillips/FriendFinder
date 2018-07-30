@@ -241,7 +241,7 @@
         // Grab the URL of the website
         var currentURL = window.location.origin;
         // .post the data to the friends API. not saving?
-        $.post("/api/frineds", userData, function (data) {
+        $.post("api/friends", userData, function (data) {
           console.log("sent!");
           // Grab the result from the post, logic.
           $("#matchName").text(data.name);

@@ -1,7 +1,7 @@
 var friends = require("../app/data/friends");
 
 module.exports = function (app) {
-    app.post("/api/friedns", function (req, res) {
+    app.post("api/friends", function (req, res) {
         var userData = req.body;
         console.log(userData);
 
